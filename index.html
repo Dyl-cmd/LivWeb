@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Liv.</div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a class="nav-link active" onclick="showSection('home')">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showSection('moments')">Moments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="showSection('messages')">Messages</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <h1>Welcome Liv!</h1>
+            <p>This website is dedicated to you and our time together.</p>
+
+            
+            <!-- Live Timer -->
+            <h2>5,496 Away From You.</h2>
+            <div class="timer-container">
+                <h2>Time Since February 3, 2023</h2>
+                <div id="live-timer" class="timer-display"></div>
+            </div>
+            <!-- <div class="card-grid">
+                <div class="card">
+                    <h3>🚀 Fast Performance</h3>
+                    <p>Built with modern web technologies for lightning-fast loading and smooth interactions.</p>
+                </div>
+                <div class="card">
+                    <h3>📱 Responsive Design</h3>
+                    <p>Looks great on all devices - desktop, tablet, and mobile. Adaptive layout that works everywhere.</p>
+                </div>
+                <div class="card">
+                    <h3>✨ Beautiful UI</h3>
+                    <p>Clean, modern interface with smooth animations and glassmorphism effects.</p>
+                </div>
+            </div> -->
+            <!-- <button class="btn" onclick="showSection('moments')">Explore Moments</button> -->
+        </section>
+
+        <!-- Moments Section -->
+         <section id="moments" class="section">
+            <h1>Moments</h1>
+            <p>Here are moments and pictures of us through our years together.</p>
+            <div class="polaroid-grid">
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/136F12E7-2E3D-4E24-9046-445557BC9CAB.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Side Eye</p>
+                        <small>I remember this one was in PIK</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/1690880822154.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Prettiest Smile<p>
+                        <small>Always have the greatest smile</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/1690881141997.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Too Focused</p>
+                        <small>Haidilao Moment</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                       <img src="/Assets/1693671974085.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Photoshoot</p>
+                        <small>We look good hehehe</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/1694184408821.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Forehead Shot</p>
+                        <small>Still my favourtite pic of you</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                       <img src="/Assets/2DCA058A-6719-44B1-AA53-E9711500538E.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Kidzania</p>
+                        <small>That time we went double date in Kidzania</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                       <img src="/Assets/2F14AAEA-A15B-4CFA-AE60-9A51FD9A06C0.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Sushi Gooooo</p>
+                        <small>Glaring into my soul</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/2F97C033-A8AE-4938-AEF3-013E4E3EA890.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Macthing</p>
+                        <small>The one on the right very cute</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                       <img src="/Assets/7DE62D9B-B7C9-4C2D-8B7D-F42FBC043D63.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Lookin Down</p>
+                        <small>Photos from below are always funny</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/48DFD0AC-2CE3-4834-ABF0-9CBAB192A16D.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Luckyyyy</p>
+                        <small>Can't decide which is cuter</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/5294BCC3-395B-417A-8E12-BBC657221375.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>First Hangout</p>
+                        <small>Lookin very awkward</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/80F26C9C-ED9C-433C-982E-3F337F9E51F7.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Gion Sushi</p>
+                        <small>Who introduced you to cold soba??</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/83025570-FA44-4997-9509-140EBEECFD20.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Pilot</p>
+                        <small>Flyin to your heartttt</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/9F86C67F-F807-452A-B53C-FA98C32C90B1.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Look Back</p>
+                        <small>Lookin very stylish as always</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/A4272721-46FD-416A-AFDB-B0785170466B.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Walkin with Luckyy</p>
+                        <small>I think the one on the left is cuter</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/B73CCAF9-01BE-4564-8FC9-00AC788077AC.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Aquarium Date</p>
+                        <small>Lookin Sexy like a model</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/CB2807AA-7AF4-4408-9725-AFE8AAAC4896.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Our First Anniversary</p>
+                        <small>I will never forget this moment</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/E57001BD-E2A5-4418-B831-0D8EB784263E.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Your Birthdayy!</p>
+                        <small>All purplee</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/FB1A7959-6514-4B67-89E5-627B51543AED.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>The Driver</p>
+                        <small>Pov : Im the Princess Passanger</small>
+                    </div>
+                </div>
+                <div class="polaroid">
+                    <div class="polaroid-image">
+                        <img src="/Assets/image0.jpg" alt="">
+                        <div class="image-overlay">
+                            <button class="change-image-btn" onclick="changeImage(this)">📷 Change Photo</button>
+                        </div>
+                    </div>
+                    <div class="polaroid-caption">
+                        <p>Head Patt</p>
+                        <small>Wish i can you give you one right now</small>
+                    </div>
+                </div>
+            </div>
+            <p>Hopefully More to come.</p>
+            <!-- <button class="btn" onclick="showSection('messages')">View Messages</button> -->
+        </section>
+
+        <!-- Messages Section -->
+        <section id="messages" class="section">
+            <h1>I LOVE YOU</h1>
+            <p>Communication is key to building meaningful relationships.</p>
+            <div class="card-grid">
+                <div class="card">
+                    <h3></h3>
+                    <p>Anytime when you're in difficult times, I'am always here for you.</p>
+                    <p>- Dylan</p>
+                </div>
+                <div class="card">
+                    <h3></h3>
+                    <p>Even though LDR is difficult and stressful at times, I'm willing to through it together with you, because you are worth the try.</p>
+                    <p>- Dylan</p>
+                </div>
+                <div class="card">
+                    <h3></h3>
+                    <p>You are the most hardworking person I know, and I love that about you.</p>
+                    <p>- Dylan</p>
+                </div>
+                <div class="card">
+                    <h3></h3>
+                    <p>You have the prettiest eyes, i can always just stare at it and never get tired of it.</p>
+                    <p>- Dylan</p>
+                </div>
+                <div class="card">
+                    <h3></h3>
+                    <p>I wish nothing but good and success for you in the future.</p>
+                    <p>- Dylan</p>
+                </div>
+                <div class="card">
+                    <h3></h3>
+                    <p>We have been together for 2 years now, and i hope there will be plenty more years together, and of course im gonna work hard to achieve that</p>
+                    <p>- Dylan</p>
+                </div>
+            </div>
+            <p>More messages soon.</p>
+            <!-- <button class="btn" onclick="showSection('home')">Back to Home</button> -->
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
